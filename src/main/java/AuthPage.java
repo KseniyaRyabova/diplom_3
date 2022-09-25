@@ -2,9 +2,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-
 public class AuthPage extends BasePage {
 
     SelenideElement authPageTitle = initSecondTitle("Вход");

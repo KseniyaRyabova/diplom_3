@@ -2,9 +2,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -55,42 +52,6 @@ public class MainPage extends BasePage {
         return this;
     }
 
-    public List<Boolean> checkTransitionBurgerElement() {
-//
-//        bunElement.click();
-//        ingredientElement.click();
-//        sauceElement.click();
-//
-        List<Boolean> actualList = new ArrayList<>();
-//        Iterator<SelenideElement> burgerElementIterator = burgerElements.iterator();
-//        Iterator<SelenideElement> titleIterator = titleElements.iterator();
-//        while (burgerElementIterator.hasNext()) {
-//            boolean actual;
-//            SelenideElement tab = burgerElementIterator.next();
-//            SelenideElement title = titleIterator.next();
-//
-//            tab.click();
-//            System.out.println("title is visible " + title.shouldBe(Condition.visible));
-//            System.out.println("current tab is active " + tab.attr("class").contains(activeTab));
-//
-//            actual = tab.attr("class").contains(activeTab);
-//            actualList.add(actual);
-//        }
-
-//        Map<SelenideElement, SelenideElement> burgerTitleAndTab = Map.of(sauceTitle, sauceElement,
-//                bunTitle, bunElement, ingredientTitle, ingredientElement);
-//        burgerTitleAndTab.forEach((title, tab) -> {
-//            boolean actual;
-////            tab.p
-////            Selenide.actions().moveToElement(tab.parent());
-//            tab.click();
-//            title.shouldBe(Condition.visible);
-//            actual = tab.attr("class").contains(activeTab);
-//            actualList.add(actual);
-//        } );
-        return actualList;
-    }
-
     public boolean checkActiveTabBun() {
         return bunElement.attr("class").contains(activeTab);
     }
@@ -117,5 +78,4 @@ public class MainPage extends BasePage {
         ingredientTitle.shouldBe(Condition.visible);
         return this;
     }
-
 }
