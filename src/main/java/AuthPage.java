@@ -11,10 +11,6 @@ public class AuthPage extends BasePage {
     SelenideElement emailInput = initInput("Email");
     SelenideElement passwordInput = initInput("Пароль");
     SelenideElement singInButton = initButton("Войти");
-    SelenideElement textForNewUser = $(byText("Вы — новый пользователь?"));
-    SelenideElement textForForgottenPassword = $(byText("Забыли пароль?"));
-    SelenideElement linkToRegister = initLinkByText("Зарегистрироваться");
-    SelenideElement linkToForgotPassword = initLinkByText("Восстановить пароль");
     SelenideElement errorIncorrectPassword = initErrorUnderInput("Некорректный пароль");
 
     public AuthPage open() {

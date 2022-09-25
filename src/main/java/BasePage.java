@@ -1,25 +1,26 @@
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.NoSuchElementException;
 
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BasePage {
-
 
     public SelenideElement initLinkByText(String linkText) {
         try {
             return $(byXpath(String.format("//a[contains(text(), '%s')]", linkText)));
         } catch (NoSuchElementException ex) {
-            return $(byXpath(String.format("//p[contains(text(), '%s')]", linkText)));}
+            return $(byXpath(String.format("//p[contains(text(), '%s')]", linkText)));
+        }
     }
 
     public SelenideElement initFirstTitle(String titleName) {
-        return $(byXpath("//h1"));
+        return $(byXpath(String.format("//h1[text()='%s']", titleName)));
     }
 
     public SelenideElement initSecondTitle(String titleName) {
-        return $(byXpath("//h2"));
+        return $(byXpath(String.format("//h2[text()='%s']", titleName)));
     }
 
     public SelenideElement initErrorUnderInput(String errorText) {
@@ -32,9 +33,5 @@ public class BasePage {
 
     public SelenideElement initInput(String placeholderName) {
         return $(byXpath(String.format("//label[text()='%s']/following-sibling::input", placeholderName)));
-    }
-
-    public SelenideElement initText(String text) {
-        return $(byText(text));
     }
 }
