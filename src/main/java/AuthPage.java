@@ -9,9 +9,10 @@ public class AuthPage extends BasePage {
     SelenideElement passwordInput = initInput("Пароль");
     SelenideElement singInButton = initButton("Войти");
     SelenideElement errorIncorrectPassword = initErrorUnderInput("Некорректный пароль");
+    private final String authPageUrl = "/login";
 
     public AuthPage open() {
-        Selenide.open("/login");
+        Selenide.open(authPageUrl);
         return this;
     }
 

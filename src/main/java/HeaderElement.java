@@ -9,9 +9,10 @@ public class HeaderElement extends BasePage {
     SelenideElement accountButton = $(byXpath("//p[text()='Личный Кабинет']/ancestor::a"));
     SelenideElement logo = $(byXpath("//div[@class='AppHeader_header__logo__2D0X2']/a"));
     SelenideElement constructorButton = $(byXpath("//p[text()='Конструктор']/ancestor::a[@href='/']"));
+    private final String headerElementUrl = "/";
 
     public HeaderElement open() {
-        Selenide.open("/");
+        Selenide.open(headerElementUrl);
         return this;
     }
 

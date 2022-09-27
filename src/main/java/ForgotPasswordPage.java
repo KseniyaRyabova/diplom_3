@@ -3,9 +3,10 @@ import com.codeborne.selenide.SelenideElement;
 
 public class ForgotPasswordPage extends BasePage {
     SelenideElement linkToSingIn = initLinkByText("Войти");
+    private final String forgotPasswordPageUrl = "/forgot-password";
 
     public ForgotPasswordPage open() {
-        Selenide.open("/forgot-password");
+        Selenide.open(forgotPasswordPageUrl);
         return this;
     }
 

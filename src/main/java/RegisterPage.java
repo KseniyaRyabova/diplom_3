@@ -11,8 +11,10 @@ public class RegisterPage extends BasePage {
     SelenideElement linkToSingIn = initLinkByText("Войти");
     SelenideElement errorIncorrectPassword = initErrorUnderInput("Некорректный пароль");
 
+    private final String registerPageUrl = "/register";
+
     public RegisterPage open() {
-        Selenide.open("/register");
+        Selenide.open(registerPageUrl);
         return this;
     }
 

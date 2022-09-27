@@ -21,9 +21,10 @@ public class MainPage extends BasePage {
     SelenideElement bunTitle = initSecondTitle(bunStr);
 
     String activeTab = "tab_tab_type_current";
+    private final String mainPageUrl = "/";
 
     public MainPage open() {
-        Selenide.open("/");
+        Selenide.open(mainPageUrl);
         return this;
     }
 

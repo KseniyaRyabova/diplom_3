@@ -9,9 +9,10 @@ public class AccountPage extends BasePage {
 
     SelenideElement descriptionPage = $(byText("В этом разделе вы можете изменить свои персональные данные"));
     SelenideElement exitButton = initButton("Выход");
+    private final String accountPageUrl = "/account/profile";
 
     public AccountPage open() {
-        Selenide.open("/account/profile");
+        Selenide.open(accountPageUrl);
         return this;
     }
 
